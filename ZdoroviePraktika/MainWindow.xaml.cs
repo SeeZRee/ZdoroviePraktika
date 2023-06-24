@@ -20,9 +20,13 @@ namespace ZdoroviePraktika
     /// </summary>
     public partial class MainWindow : Window
     {
+        ZdorovieDBEntities context;
+
         public MainWindow()
         {
             InitializeComponent();
+            context = new ZdorovieDBEntities();
+            Myframe.Navigate(new Pages.Authorization(context));
         }
     }
 }

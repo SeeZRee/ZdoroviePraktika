@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:ZdoroviePraktika"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontFamily" Value="Trebuchet"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Trebuchet"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="LightGreen"/>
+        </Style>
+
+        
     </Application.Resources>
 </Application>
