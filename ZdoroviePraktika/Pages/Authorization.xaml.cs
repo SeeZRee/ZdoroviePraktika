@@ -36,6 +36,8 @@ namespace ZdoroviePraktika.Pages
         private void Timer_Tick(object sender, EventArgs e)
         {
             EnterButton.IsEnabled = true;
+            LoginBox.Background = Brushes.White;
+            PasswordBox.Background = Brushes.White;
             timer.Stop();
         }
 
@@ -52,7 +54,8 @@ namespace ZdoroviePraktika.Pages
                 {
                     MessageBox.Show("Вы успешно авторизованны");
                     countClick = 0;
-                    ///LoginBox.Background("Green");
+                    LoginBox.Background = Brushes.Green;
+                    PasswordBox.Background = Brushes.Green;
                 }
                 else 
                 {
@@ -60,6 +63,8 @@ namespace ZdoroviePraktika.Pages
                     if (countClick >= 3) 
                     {
                         EnterButton.IsEnabled=false;
+                        LoginBox.Background = Brushes.Red;
+                        PasswordBox.Background = Brushes.Red;
                         timer.Start();
                         MessageBox.Show("Повторите попытку через 30 сек");
                     }
@@ -72,6 +77,8 @@ namespace ZdoroviePraktika.Pages
                 if (countClick >= 3)
                 {
                     EnterButton.IsEnabled = false;
+                    LoginBox.Background = Brushes.Red;
+                    PasswordBox.Background = Brushes.Red;
                     timer.Start();
                     MessageBox.Show("Повторите попытку через 30 сек");
                 }
