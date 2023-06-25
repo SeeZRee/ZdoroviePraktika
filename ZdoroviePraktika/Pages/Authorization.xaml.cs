@@ -52,10 +52,10 @@ namespace ZdoroviePraktika.Pages
             {
                 if (user.Password.Equals(pass)) 
                 {
-                    MessageBox.Show("Вы успешно авторизованны");
                     countClick = 0;
                     LoginBox.Background = Brushes.Green;
                     PasswordBox.Background = Brushes.Green;
+                    MessageBox.Show("Вы успешно авторизованны");
                 }
                 else 
                 {
@@ -83,6 +83,12 @@ namespace ZdoroviePraktika.Pages
                     MessageBox.Show("Повторите попытку через 30 сек");
                 }
             }
+        }
+
+        private void RegNewClick(object sender, RoutedEventArgs e)
+        {
+            Registration registration = new Registration(context);
+            registration.Show();
         }
     }
 }

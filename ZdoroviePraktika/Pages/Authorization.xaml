@@ -38,7 +38,7 @@
         </StackPanel>
 
         <Button x:Name="EnterButton" Content="Войти" FontSize="30" Grid.Row="4" Grid.Column="1" Click="BottomClick"/>
-        <Button x:Name="Зарегистрироваться" Grid.Row="5" Grid.ColumnSpan="5" Width="270" HorizontalAlignment="Right">Зарегистрироваться</Button>
+        <Button x:Name="Зарегистрироваться" Grid.Row="5" Grid.ColumnSpan="5" Width="270" HorizontalAlignment="Right" Click="RegNewClick">Зарегистрироваться</Button>
 
     </Grid>
 </Page>

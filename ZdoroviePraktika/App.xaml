@@ -14,7 +14,5 @@
             <Setter Property="Margin" Value="10"/>
             <Setter Property="Background" Value="LightGreen"/>
         </Style>
-
-        
     </Application.Resources>
 </Application>
