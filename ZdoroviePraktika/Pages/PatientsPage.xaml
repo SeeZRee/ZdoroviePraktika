@@ -38,7 +38,8 @@
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Удалить" FontSize="10" Click="DeletePatient"/>
+                    <MenuItem Header="Удалить" FontSize="10" Click="DeletePatientClick"/>
+                    <MenuItem Header="Редактировать" FontSize="10" Click="EditPatientClick" Name="ButtonAU"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
