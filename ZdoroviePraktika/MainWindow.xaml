@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZdoroviePraktika"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Zdorovie+" MinHeight="550" MinWidth="850" Height="550" Width="850" MaxHeight="720" MaxWidth="1280">
     <Grid>
-        <Frame x:Name="Myframe"/>
+        <Frame x:Name="Myframe" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

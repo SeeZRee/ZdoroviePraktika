@@ -23,14 +23,15 @@ namespace ZdoroviePraktika.Pages
     {
         ZdorovieDBEntities context;
         DispatcherTimer timer;
-        public Authorization(ZdorovieDBEntities cont)
+        Window window;
+        public Authorization(ZdorovieDBEntities cont, Window w)
         {
             InitializeComponent();
             context = cont;
+            window = w;
             timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0,0,30);
+            timer.Interval = new TimeSpan(0, 0, 30);
             timer.Tick += Timer_Tick;
-
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace ZdoroviePraktika.Pages
                     MessageBox.Show("Вы успешно авторизованны");
                     user.DateOfLastLog= DateTime.Now;
                     context.SaveChanges();
+                    NavigationService.Navigate(new ManeMenuPage(context, window));
                 }
                 else 
                 {
@@ -111,9 +113,6 @@ namespace ZdoroviePraktika.Pages
                 rememberPassPage.Show();
                 ///Myframe.Navigate(new Pages.Authorization(context));
                 ///RememberPassPage.Navigate(new Pages.RememberPassPage(user));
-                
-
-
             }
         }
     }

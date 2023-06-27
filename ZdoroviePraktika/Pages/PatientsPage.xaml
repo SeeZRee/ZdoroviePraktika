@@ -1,0 +1,53 @@
+﻿<Page x:Class="ZdoroviePraktika.Pages.PatientsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ZdoroviePraktika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PatientsPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="2" FontSize="32" Margin="1" Width="280" FontStyle="Italic">Список пациентов</TextBlock>
+        <Rectangle Grid.Row="1" Grid.ColumnSpan="4" Fill="LightGreen" VerticalAlignment="Top" Margin="0" Height="20"/>
+        <TextBlock x:Name="CountPatient" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="PatientsData" AutoGenerateColumns="False" Grid.Row="3" Grid.ColumnSpan="4" Grid.RowSpan="5" SelectionMode="Single" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding fio}" FontSize="15"/>
+                <DataGridTextColumn Header="Серия и номер" Width="*" Binding="{Binding seriesAndNumberPassword}"/>
+                <DataGridTextColumn Header="Телефон" Width="*" Binding="{Binding phone}"/>
+                <DataGridTextColumn Header="ОМС" Width="*" Binding="{Binding oms}"/>
+            </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Удалить" FontSize="10" Click="DeletePatient"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+        <Button Content="+" Grid.Row="8" Grid.Column="3" Width="50" Height="50" Margin="1" Click="AddNewPatient">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>

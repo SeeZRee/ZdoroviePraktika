@@ -20,7 +20,7 @@ namespace ZdoroviePraktika.Pages
     /// </summary>
     public partial class RememberPassPage : Window
     {
-        ZdorovieDBEntities context;
+        ///ZdorovieDBEntities context;
         User _user;
         public RememberPassPage(User user)
         {

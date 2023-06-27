@@ -48,6 +48,7 @@ namespace ZdoroviePraktika.Pages
             {
                 context.User.Add(user);
                 context.SaveChanges();
+                ///MessageBox.Show("Вы успешно зарегестрировались")
                 this.Close();
             }
         }

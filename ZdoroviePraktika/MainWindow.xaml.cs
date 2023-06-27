@@ -26,7 +26,7 @@ namespace ZdoroviePraktika
         {
             InitializeComponent();
             context = new ZdorovieDBEntities();
-            Myframe.Navigate(new Pages.Authorization(context));
+            Myframe.Navigate(new Pages.Authorization(context, this));
         }
     }
 }
