@@ -29,16 +29,16 @@
         
         <StackPanel Grid.Row="2" Grid.Column="1">
             <TextBlock Grid.Row="2" Grid.Column="1" Text="Логин"/>
-            <TextBox Name="LoginBox"/>
+            <TextBox Name="LoginBox" Width="370"/>
         </StackPanel>
         
         <StackPanel Grid.Row="3" Grid.Column="1">
             <TextBlock Grid.Row="3" Grid.Column="1" Text="Пароль"/>
-            <PasswordBox Name="PasswordBox"/>
+            <PasswordBox Name="PasswordBox" Width="370" Background="AliceBlue"/>
         </StackPanel>
 
         <Button x:Name="EnterButton" Content="Войти" FontSize="30" Grid.Row="4" Grid.Column="1" Click="BottomClick"/>
-        <Button x:Name="Зарегистрироваться" Grid.Row="5" Grid.ColumnSpan="5" Width="270" HorizontalAlignment="Right" Click="RegNewClick">Зарегистрироваться</Button>
-
+        <Button x:Name="Reg" Grid.Row="5" Grid.ColumnSpan="5" Width="270" HorizontalAlignment="Right" Click="RegNewClick">Зарегистрироваться</Button>
+        <Button x:Name="RememberPass" Content="Забыли пароль?" Grid.Row="5" Grid.ColumnSpan="2" Width="210" HorizontalAlignment="Left" Margin="10"  Click="RememberPassClick"/>
     </Grid>
 </Page>

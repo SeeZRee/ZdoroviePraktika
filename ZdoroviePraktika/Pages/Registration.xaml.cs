@@ -27,7 +27,7 @@ namespace ZdoroviePraktika.Pages
         }
 
         private void RegClick(object sender, RoutedEventArgs e)
-        {
+        { 
             
             User user = new User()
             {

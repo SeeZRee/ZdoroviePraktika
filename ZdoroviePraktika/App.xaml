@@ -14,5 +14,8 @@
             <Setter Property="Margin" Value="10"/>
             <Setter Property="Background" Value="LightGreen"/>
         </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="AliceBlue"/>
+        </Style>
     </Application.Resources>
 </Application>

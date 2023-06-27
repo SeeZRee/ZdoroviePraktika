@@ -56,6 +56,8 @@ namespace ZdoroviePraktika.Pages
                     LoginBox.Background = Brushes.Green;
                     PasswordBox.Background = Brushes.Green;
                     MessageBox.Show("Вы успешно авторизованны");
+                    user.DateOfLastLog= DateTime.Now;
+                    context.SaveChanges();
                 }
                 else 
                 {
@@ -67,6 +69,7 @@ namespace ZdoroviePraktika.Pages
                         PasswordBox.Background = Brushes.Red;
                         timer.Start();
                         MessageBox.Show("Повторите попытку через 30 сек");
+                        RememberPass.Visibility = Visibility.Visible;
                     }
                 }
 
@@ -79,8 +82,10 @@ namespace ZdoroviePraktika.Pages
                     EnterButton.IsEnabled = false;
                     LoginBox.Background = Brushes.Red;
                     PasswordBox.Background = Brushes.Red;
+                    RememberPass.Visibility = Visibility.Visible;
                     timer.Start();
                     MessageBox.Show("Повторите попытку через 30 сек");
+                    
                 }
             }
         }
@@ -89,6 +94,27 @@ namespace ZdoroviePraktika.Pages
         {
             Registration registration = new Registration(context);
             registration.Show();
+        }
+
+        private void RememberPassClick(object sender, RoutedEventArgs e)
+        {
+            User user = context.User.Find(LoginBox.Text);
+            if (user == null)
+            {
+                MessageBox.Show("Введите логин");
+            }
+            else
+            {
+                ///User us = context.User.Find(LoginBox.Text);
+                ///NavigationService.Navigate(new RememberPassPage(us));
+                RememberPassPage rememberPassPage = new RememberPassPage(user);
+                rememberPassPage.Show();
+                ///Myframe.Navigate(new Pages.Authorization(context));
+                ///RememberPassPage.Navigate(new Pages.RememberPassPage(user));
+                
+
+
+            }
         }
     }
 }
